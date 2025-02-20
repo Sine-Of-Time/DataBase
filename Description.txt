@@ -1,0 +1,38 @@
+The following is an basic summary of the code:
+
+Book:
+Represents a book with fields such as ISBN, title, author, path (file location), etc.
+Includes methods to count unique words in the corresponding text file, get the top ten most frequent words, compare by ISBN, clone itself, and more.
+
+DataCenter:
+A singleton class that manages a collection (ArrayList) of Book objects.
+Responsible for adding and removing books, saving/loading the Book list to/from a .ser (serialized) file, and maintaining a directory of text files.
+
+FileWrapper:
+Extends File but also stores an additional array of metadata (like title, author, ISBN).
+Used in DataCenter.add() to create Book objects with the extra info.
+
+Node:
+Represents a (word, occurrence count, percentage) tuple used to track the frequency of individual words.
+Implements Comparable to allow sorting by occurrence count.
+
+P2_GUI (JavaFX Application):
+The main JavaFX application that provides the user interface.
+Displays a table of books, a pie chart for the top 10 words in the selected book, and an advanced stats table (word frequencies).
+Allows filtering of books (by ISBN, Title, or Author) and adding/removing books.
+
+UserInput:
+A small utility class that shows a modal dialog prompting the user to enter a book’s Title, Author, and ISBN, returning these values as a string array.
+Overall, the application manages a collection of books, each of which points to a .txt file. It analyzes word usage (unique counts and frequency) and presents these statistics in a graphical interface.
+
+
+
+
+
+
+
+
+
+
+
+
