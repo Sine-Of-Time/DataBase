@@ -25,6 +25,7 @@ UserInput:
 A small utility class that shows a modal dialog prompting the user to 
 enter a book’s Title, Author, and ISBN, returning these
 values as a string array.
+---------------
 Overall, the application manages a collection of books,
 each of which points to a .txt file. It analyzes word usage
 (unique counts and frequency) and presents these statistics in a graphical interface.
